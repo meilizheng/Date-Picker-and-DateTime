@@ -6,7 +6,25 @@
         xmlns:local="clr-namespace:Date_Picker_and_DateTime"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Canvas Background="#FF98002E">
+        <RichTextBox  HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="303" Canvas.Left="439" Canvas.Top="50">
+            <FlowDocument>
+                <Paragraph>
+                    <Run x:Name="RunDisplay" Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox x:Name="txtDay" Height="28" Canvas.Left="38" TextWrapping="Wrap" Canvas.Top="75" Width="126" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="lbDay" Content="Day" Height="33" Canvas.Left="38" Canvas.Top="37" Width="104" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txtMonth" Height="28" Canvas.Left="38" TextWrapping="Wrap" Canvas.Top="160" Width="126" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="lbMonth" Content="Month" Height="33" Canvas.Left="38" Canvas.Top="122" Width="104" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtYear" Height="28" Canvas.Left="38" TextWrapping="Wrap" Canvas.Top="242" Width="126" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="lbYear" Content="Year" Height="33" Canvas.Left="38" Canvas.Top="204" Width="104" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="btDisplayTime" Content="Display Time" Height="36" Canvas.Left="246" Canvas.Top="71" Width="143" Click="btDisplayTime_Click"/>
+        <Button x:Name="btDriverLicense" Content="Drivers License" Height="33" Canvas.Left="246" Canvas.Top="118" Width="143" Click="btDriverLicense_Click"/>
+        <DatePicker x:Name="dpDate" Height="94" Canvas.Left="38" Canvas.Top="299" Width="143" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Calendar Height="153" Canvas.Left="230" Canvas.Top="183" Width="174" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="btnResult" Content="Results" Height="38" Canvas.Left="246" Canvas.Top="367" Width="143" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnResult_Click"/>
 
-    </Grid>
+    </Canvas>
 </Window>
