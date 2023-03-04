@@ -23,7 +23,7 @@
         <Button x:Name="btDisplayTime" Content="Display Time" Height="36" Canvas.Left="246" Canvas.Top="71" Width="143" Click="btDisplayTime_Click"/>
         <Button x:Name="btDriverLicense" Content="Drivers License" Height="33" Canvas.Left="246" Canvas.Top="118" Width="143" Click="btDriverLicense_Click"/>
         <DatePicker x:Name="dpDate" Height="94" Canvas.Left="38" Canvas.Top="299" Width="143" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Calendar Height="153" Canvas.Left="230" Canvas.Top="183" Width="174" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Calendar x:Name="calDate" Height="153" Canvas.Left="230" Canvas.Top="183" Width="174" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="btnResult" Content="Results" Height="38" Canvas.Left="246" Canvas.Top="367" Width="143" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnResult_Click"/>
 
     </Canvas>

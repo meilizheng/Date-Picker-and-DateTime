@@ -26,24 +26,8 @@ namespace Date_Picker_and_DateTime
         public MainWindow()
         {
             InitializeComponent();
-            DateTime date = new DateTime();
-            RunDisplay.Text = date.ToString();
-            DateTime now = DateTime.Now;
-            string shorttime = now.ToShortTimeString();
-            string longtime = now.ToLongTimeString();
-
-            string formatString = $"" +
-                $"Short Time: {shorttime}\n" +
-                $"Long Time: {longtime}\n" +
-                $"Short Day: {now.ToShortDateString}\n" +
-                $"Long Date: {now.ToShortDateString} \n" +
-                $"Year {now.Year}\n" + 
-                $"Date Of the Week: {now.DayOfWeek} \n";
-           DateTime nowPlus7Months = now.AddMonths(7);
-            TimeSpan differenceInDays = nowPlus7Months - now;
-
-
-            RunDisplay.Text = (differenceInDays / 365.25).ToString();
+            BlogPost bp = new BlogPost ("Header 1", "Body 1");
+            RunDisplay.Text = bp.ToString ();        
 
         }
 
@@ -86,8 +70,14 @@ namespace Date_Picker_and_DateTime
 
         private void btnResult_Click(object sender, RoutedEventArgs e)
         {
-            DateTime selecteddate = dpDate.SelectedDate.Value;
-            RunDisplay.Text = selecteddate.ToString();
+
+            bool calanderDateSelected = calDate.SelectedDate.HasValue;
+            DateTime timecelected = DateTime.Now;
+            if (calanderDateSelected)
+            {
+                timecelected = calDate.SelectedDate.Value;
+            }
+            RunDisplay.Text = timecelected.ToString();
         }
     }
 }
