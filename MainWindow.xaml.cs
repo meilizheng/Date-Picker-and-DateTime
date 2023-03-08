@@ -78,6 +78,7 @@ namespace Date_Picker_and_DateTime
                 timecelected = calDate.SelectedDate.Value;
             }
             RunDisplay.Text = timecelected.ToString();
+            //display result
         }
     }
 }
